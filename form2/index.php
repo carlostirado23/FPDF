@@ -1165,10 +1165,10 @@ $pdf->SetXY(110, 177);
 $pdf->MultiCell(178, 3, utf8_decode('ACTIVADA #5'));
 
 // PAGINA NUMERO 2
-
 $pdf->AddPage('LANDSCAPE', '');
+
 // Dibujar el marco del formulario con bordes redondeados
-$pdf->RoundedRect(5, 10, 287, 177, 0, 'D');
+$pdf->RoundedRect(5, 10, 287, 165, 0, 'D');
 
 $pdf->Image('./servicer.jpeg', 6, 11, 40);
 
@@ -1257,49 +1257,1945 @@ $pdf->Line(5, 34, 292, 34); //HORIZAONTAL
 // PELIGROS
 $pdf->SetFont("Arial", "B", 7);
 $pdf->PaintTextBackground(5, 34, utf8_decode('PELIGROS'), [35, 175, 216], 0, 26, 9);
-$pdf->Line(31, 34, 31, 187);
+$pdf->Line(31, 34, 31, 175); //VERTICAL
 
 // RIESGOS Marque con una (X)
 $pdf->PaintTextBackground(31, 34, utf8_decode('RIESGOS'), [35, 175, 216], 0, 38, 6);
 $pdf->PaintTextBackground(31, 38, utf8_decode('Marque con una (X'), [35, 175, 216], 0, 38, 5);
-$pdf->Line(69, 34, 69, 187);
+$pdf->Line(69, 34, 69, 175); //VERTICAL
 
 // INCIDENCIA / DESCARGO / AVISO
 $pdf->PaintTextBackground(69, 34, utf8_decode('INCIDENCIA / DESCARGO / AVISO'), [35, 175, 216], 0, 42, 5.5);
 $pdf->PaintTextBackground(69, 39, utf8_decode('1          2          3          4          5'), [35, 175, 216], 0, 42, 4);
 $pdf->Line(69, 39, 111, 39); //HORIZONTAL
 // 1 
-$pdf->Line(77.4, 39, 77.4, 187); //VERTICAL
+$pdf->Line(77.4, 39, 77.4, 175); //VERTICAL
 
 // 2
-$pdf->Line(85.8, 39, 85.8, 187); //VERTICAL
+$pdf->Line(85.8, 39, 85.8, 175); //VERTICAL
 
 // 3
-$pdf->Line(94.2, 39, 94.2, 187); //VERTICAL
+$pdf->Line(94.2, 39, 94.2, 175); //VERTICAL
 
 // 4
-$pdf->Line(102.6, 39, 102.6, 187); //VERTICAL
-$pdf->Line(111, 34, 111, 187); //VERTICAL
+$pdf->Line(102.6, 39, 102.6, 175); //VERTICAL
+$pdf->Line(111, 34, 111, 175); //VERTICAL
 $pdf->Line(31, 43, 111, 43); //HORIZONTAL
 
 // CONSECUENCIAS
 $pdf->PaintTextBackground(111, 34, utf8_decode('CONSECUENCIAS'), [35, 175, 216], 0, 80, 9);
-$pdf->Line(191, 34, 191, 187);
+$pdf->Line(191, 34, 191, 175); //VERTICAL
 
 // CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
 $pdf->PaintTextBackground(191, 34, utf8_decode('CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES'), [35, 175, 216], 0, 101, 9);
 
-
-
- 
-
 // Eléctrico
-$pdf->SetXY(11, 70);
+$pdf->SetXY(11, 65);
 $pdf->Cell(0, 0, utf8_decode('Eléctrico'));
 
-// Añadir el texto con ajuste de ancho
-$pdf->SetXY(112, 60);
+// DATOS QUE ESTN EN RIEGOS
+
+// Electrización
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 46);
+$pdf->Cell(0, 0, utf8_decode('Electrización'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 45);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 45);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 45);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 45);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 45);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 47, 111, 47); //HORIZONTAL
+
+// Electrocución
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 49.5);
+$pdf->Cell(0, 0, utf8_decode('Electrocución'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 49);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 49);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 49);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 49);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 49);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 51, 111, 51); //HORIZONTAL
+
+// Arco Eléctrico
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 53);
+$pdf->Cell(0, 0, utf8_decode('Arco Eléctrico'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 53);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 53);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 53);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 53);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 53);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 55, 111, 55); //HORIZONTAL
+
+// Perforacion de conductores
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 57.5);
+$pdf->Cell(0, 0, utf8_decode('Arco Eléctrico'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 57);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 57);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 57);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 57);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 57);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 59, 111, 59); //HORIZONTAL
+
+// Incendio o explosión
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 61.5);
+$pdf->Cell(0, 0, utf8_decode('Incendio o explosión'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 61);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 61);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 61);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 61);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 61);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 63, 111, 63); //HORIZONTAL
+
+// Equipos energizados
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 65.5);
+$pdf->Cell(0, 0, utf8_decode('Equipos energizados'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 65);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 65);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 65);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 65);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 65);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 67, 111, 67); //HORIZONTAL
+
+// Realimentaciones de energía
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 69.5);
+$pdf->Cell(0, 0, utf8_decode('Realimentaciones de energía'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 69);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 69);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 69);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 69);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 69);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 71, 111, 71); //HORIZONTAL
+
+// Contacto directo e indirecto con redes de energia
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 71);
+$pdf->MultiCell(38, 3, utf8_decode('Contacto directo e indirecto con redes de energia'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 74);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 74);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 74);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 74);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 74);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 77, 111, 77); //HORIZONTAL
+
+// Cruce de circuitos paralelos
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 79.5);
+$pdf->Cell(0, 0, utf8_decode('Cruce de circuitos paralelos'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 79);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 79);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 79);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 79);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 79);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 81, 111, 81); //HORIZONTAL
+
+// Energización por parte de terceros
+$pdf->SetFont("Arial", "", 6.7);
+$pdf->SetXY(31, 83.5);
+$pdf->Cell(0, 0, utf8_decode('Energización por parte de terceros'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 83);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 83);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 83);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 83);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 83);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 85, 111, 85); //HORIZONTAL
+
+// Exposicion a acometidaas no autorizadas
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 85.5);
+$pdf->MultiCell(38, 2.5, utf8_decode('Exposicion a acometidaas no autorizadas'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 88);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 88);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 88);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 88);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 88);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Quemaduras superficiales de la piel
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 58);
 $pdf->MultiCell(75, 3, utf8_decode('Quemaduras superficiales de la piel, quemaduras internas, Tetanizaciones musculares, traumas respiratorios, fisiciologicos, psicologicos, cardiacos, Trauma de variada severidad, perdida material, de organos y miembros del cuerpo, Daños a la propiedad, y muerte'), 0, "C");
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Dotación ignífugo, Guantes dielectrico
+$pdf->SetXY(191, 58);
+$pdf->MultiCell(100, 3, utf8_decode('Dotación ignífugo, Guantes dielectrico, clase 0, II y IV, Uso de careta anti arco electrico, monja o escafandra ignifuga, tapete dielectrico, Pértigas dieléctricas; Desarrollo correcto de los procedimientos de trabajo. Protocolo de Seguridad en riesgo eléctrico, reglas de oro, Capacitación en riesgo eléctrico, inspección a las herramientas, Plan de Emergencia. '), 0, "C");
+$pdf->Line(5, 91, 292, 91); //HORIZONTAL
+
+// Transporte
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 103);
+$pdf->Cell(0, 0, utf8_decode('Transporte'));
+
+// DATOS DE RIESGOS
+// Desplazamiento vehicular y micro sueño
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 92);
+$pdf->MultiCell(38, 2.5, utf8_decode('Desplazamiento vehicular y micro sueño'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 94);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 94);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 94);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 94);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 94);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 97, 111, 97); //HORIZONTAL
+
+// Falla de mecanicas y electricas.
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 99);
+$pdf->Cell(0, 0, utf8_decode('Falla de mecanicas y electricas.'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 99);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 99);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 99);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 99);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 99);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 101, 111, 101); //HORIZONTAL
+
+// Derrape o Deslizamiento de llantas
+$pdf->SetFont("Arial", "", 6.7);
+$pdf->SetXY(31, 103);
+$pdf->Cell(0, 0, utf8_decode('Derrape o Deslizamiento de llantas'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 103);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 103);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 103);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 103);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 103);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 105, 111, 105); //HORIZONTAL
+
+// Volcamientos, Choques y 
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 107);
+$pdf->Cell(0, 0, utf8_decode('Volcamientos, Choques y '));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 107);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 107);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 107);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 107);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 107);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 109, 111, 109); //HORIZONTAL
+
+// Transporte fluvia
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 111);
+$pdf->Cell(0, 0, utf8_decode('Transporte fluvia'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 111);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 111);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 111);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 111);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 111);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Accidente vehicular en Trabajo
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 95);
+$pdf->MultiCell(75, 3, utf8_decode('Accidente vehicular en Trabajo, en áreas o vías públicas, lesiones, contusiones y muerte, '), 0, "C");
+$pdf->SetXY(118, 107);
+$pdf->Cell(0, 0, utf8_decode('En caso de traslado en transporte Fluvial, ahogamiento '));
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Dotación ignífugo, Guantes dielectrico
+$pdf->SetXY(191, 94);
+$pdf->MultiCell(100, 3, utf8_decode('Preoperacional del vehiculo, Manejo defensivo, pausas activas cada dos horas de viaje, tomar 15 min descanso; Documentos vigentes de conduccion y vehicular, Kit de carretera, Botiquin de primeros auxilios, Extintor Multiproposito. Mantenimiento preventivo y correctivo vehicular. En caso de traslado en transporte fluvial utilizar chaleco de Salvavidas'), 0, "C");
+
+$pdf->Line(5, 113, 292, 113); //HORIZONTAL
+
+// Alturas
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 122);
+$pdf->Cell(0, 0, utf8_decode('Alturas'));
+
+// Caida a distinto nive
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 117);
+$pdf->Cell(0, 0, utf8_decode('Caida a distinto nive'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 116);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 116);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 116);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 116);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 116);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 119, 111, 119); //HORIZONTAL
+
+// Condiciones de la labor por encima de 2 mts de altura
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 122);
+$pdf->MultiCell(38, 2.5, utf8_decode('Condiciones de la labor por encima de 2 mts de altura'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 125);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 125);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 125);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 125);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 125);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Lesiones, Fracturas,Traumas psicologicos, perdida de organos
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 117);
+$pdf->MultiCell(75, 3, utf8_decode('Lesiones, Fracturas,Traumas psicologicos, perdida de organos y miembros del cuerpo. Daños a la propiedad y perdida material de la empresa, Muerte,'), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Capacitación, los sistemas de ingeniería para prevención de caídas
+$pdf->SetXY(191, 114);
+$pdf->MultiCell(100, 3, utf8_decode('Capacitación, los sistemas de ingeniería para prevención de caídas, medidas colectivas de prevención.Permiso de trabajo en alturas.
+Sistemas de acceso para trabajo en alturas. uso e implementacion del kit de rescate.Trabajos en suspensión, certificación para trabajo seguro en alturas vigente y cargado en la pagina delministerio de trabajo , Inspeccion tecnica anual de EPCC e inspeccion pre operacional de EPCC.'), 0, "C");
+$pdf->Line(5, 132, 292, 132); //HORIZONTAL
+
+// Publico
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 141);
+$pdf->Cell(0, 0, utf8_decode('Publico'));
+
+// Orden Publico
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 135);
+$pdf->Cell(0, 0, utf8_decode('Orden Publico'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 134);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 134);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 134);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 134);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 134);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 137, 111, 137); //HORIZONTAL
+
+// Atracos / Asaltos / Robo
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 141);
+$pdf->Cell(0, 0, utf8_decode('Atracos / Asaltos / Robo'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 140);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 140);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 140);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 140);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 140);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 143, 111, 143); //HORIZONTAL
+
+// Atentados, secuestros
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 148);
+$pdf->Cell(0, 0, utf8_decode('Atentados, secuestros'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 146);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 146);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 146);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 146);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 146);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// zonas de difícil acceso y zonas denominadas rojas
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 135);
+$pdf->MultiCell(75, 3, utf8_decode('zonas de difícil acceso y zonas denominadas rojas. retención de trabajadores y bienes, Daños a la propiedad y perdida material de la empresa, Muerte, '), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Capacitación al riesgo público.
+$pdf->SetXY(191, 134);
+$pdf->MultiCell(100, 3, utf8_decode('Capacitación al riesgo público.
+Promover el código de convivencia ciudadana entre los trabajadores. Difundir números de emergencia locales y socializar comportamientos que deben tomar ante  casos de atracos, amenazas, situaciones de violencia, etc.'), 0, "C");
+$pdf->Line(5, 150, 292, 150); //HORIZONTAL
+
+// Psicosocial
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 158);
+$pdf->Cell(0, 0, utf8_decode('Psicosocial'));
+
+// Condiciones de la tarea (Carga mental y laboral)
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 152);
+$pdf->MultiCell(38, 2.5, utf8_decode('Condiciones de la tarea (Carga mental y laboral)'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 153);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 153);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 153);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 153);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 153);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 157, 111, 157); //HORIZONTAL
+
+// Características de la organización del trabajo (comunicación, tecnología)
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 159);
+$pdf->MultiCell(38, 2.5, utf8_decode('Características de la organización del trabajo (comunicación, tecnología)'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 162);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 162);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 162);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 162);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 162);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 168, 111, 168); //HORIZONTAL
+
+// Jornada del trabajo
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 171);
+$pdf->Cell(0, 0, utf8_decode('Jornada del trabajo'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 171);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 171);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 171);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 171);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 171);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Estrés, Sindrome de burnout, trombosis, parlisis facial, deserción laboral.
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 158);
+$pdf->MultiCell(75, 3, utf8_decode('Estrés, Sindrome de burnout, trombosis, parlisis facial, deserción laboral. '), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Capacitación sobre manejo de riesgo psicosocial
+$pdf->SetXY(191, 155);
+$pdf->MultiCell(100, 3, utf8_decode('Capacitación sobre manejo de riesgo psicosocial, Formacion en el manejo y planifficacion del trabajo, comunicación asertiva.
+Bateria riesgo Psicosocial, Encuesta de clima laboral, hidratacion, pausas activas, descansos. Programa de bienestar laboral, Rotacion del personal.'), 0, "C");
+
+
+// PAGINA NUMERO 3
+$pdf->AddPage('LANDSCAPE', '');
+
+// Dibujar el marco del formulario con bordes redondeados
+$pdf->RoundedRect(5, 10, 287, 180, 0, 'D');
+
+$pdf->Image('./servicer.jpeg', 6, 11, 40);
+
+// ANALISIS SEGURO DE TRABAJO
+$pdf->SetFont('Arial', 'B', 9);
+$pdf->SetX($pdf->GetX() - 190);
+$pdf->Cell(0, 8, utf8_decode("ANÁLISIS SEGURO DE TRABAJO"));
+$pdf->Line(47, 16, 292, 16); //HORIZONTAL
+
+// PROCESO SEGURIDAD Y SALUD EN EL TRABAJO
+$pdf->SetX($pdf->GetX() - 180);
+$pdf->Cell(0, 24, utf8_decode("PROCESO SEGURIDAD Y SALUD EN EL TRABAJO"));
+
+// TEXTO CON FONDE DE COLOR
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->PaintTextBackground(5, 27, utf8_decode('ELABORÓ / ACTUALIZÓ'), [35, 175, 216], 0, 42, 4);
+$pdf->PaintTextBackground(47, 27, utf8_decode('REVISÓ'), [35, 175, 216], 0, 219, 4);
+
+// APROBO
+$pdf->PaintTextBackground(266, 27, utf8_decode('APROBÓ'), [35, 175, 216], 0, 26, 4);
+
+// LINEAL VERTICAL QUE ESTA AL LADO DE LA IMAGEN
+$pdf->Line(47, 10, 47, 34); // VERTICAL
+
+// codigo
+$pdf->Line(266, 10, 266, 34); //VERTICAL
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(267, 13);
+$pdf->Cell(0, 0, utf8_decode("Código:"));
+
+// F-SST-02
+$pdf->SetFont("Arial", "", 8);
+$pdf->SetXY(277, 13);
+$pdf->Cell(0, 0, utf8_decode("F-SST-02"));
+
+// FECHA
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetX($pdf->GetX() - 20);
+$pdf->Cell(0, 10, "Fecha:");
+
+// 01/04/2024
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 11);
+$pdf->Cell(0, 10, "01/04/2024");
+$pdf->Line(266, 19.6, 292, 19.6); //HORIZONTAL
+
+// VERSION
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetX($pdf->GetX() - 20);
+$pdf->Cell(0, 18, utf8_decode("Versión:"));
+
+// 02
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 9);
+$pdf->Cell(0, 18, "02");
+$pdf->Line(266, 23.3, 292, 23.3); //HORIZAONTAL
+
+// VERSION
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetX($pdf->GetX() - 20);
+$pdf->Cell(0, 25, utf8_decode("Página:"));
+
+// 1 de 4
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 10);
+$pdf->Cell(0, 25, "3 de 4");
+$pdf->Line(5, 27, 292, 27); //HORIZAONTAL
+$pdf->Line(5, 31, 292, 31); //HORIZAONTAL
+
+// GERENTE
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 14);
+$pdf->Cell(0, 39.4, "Gerente");
+
+
+// auxiliar de calidad
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 571);
+$pdf->Cell(0, 39.4, "Auxiliar de calidad");
+
+// LIDER SGI
+$pdf->SetX($pdf->GetX() - 143);
+$pdf->Cell(0, 39.4, "Lider SGI");
+$pdf->Line(5, 34, 292, 34); //HORIZAONTAL
+
+$pdf->Line(31, 34, 31, 190); //VERTICAL
+
+$pdf->Line(69, 34, 69, 190); //VERTICAL
+
+
+// 1 
+$pdf->Line(77.4, 34, 77.4, 190); //VERTICAL
+
+// 2
+$pdf->Line(85.8, 34, 85.8, 190); //VERTICAL
+
+// 3
+$pdf->Line(94.2, 34, 94.2, 190); //VERTICAL
+
+// 4
+$pdf->Line(102.6, 34, 102.6, 190); //VERTICAL
+
+// 5
+$pdf->Line(111, 34, 111, 190); //VERTICAL
+
+$pdf->Line(191, 34, 191, 190); //VERTICAL
+
+
+// Físicos
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 45);
+$pdf->Cell(0, 0, utf8_decode('Físicos'));
+
+// DATOS QUE ESTN EN RIEGOS
+// Exposición a Frio / Calor
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 37);
+$pdf->Cell(0, 0, utf8_decode('Exposición a Frio / Calor'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 37);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 37);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 37);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 37);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 37);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 40, 111, 40); //HORIZONTAL
+
+// Radiación Solar
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 43);
+$pdf->Cell(0, 0, utf8_decode('Radiación Solar'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 43);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 43);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 43);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 43);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 43);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 45, 111, 45); //HORIZONTAL
+
+// Encandilamiento / Oscuridad
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 46);
+$pdf->MultiCell(38, 3, utf8_decode('Encandilamiento / Oscuridad'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 47.5);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 47.5);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 47.5);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 47.5);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 47.5);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 50, 111, 50); //HORIZONTAL
+
+// Ruido
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 52);
+$pdf->Cell(0, 0, utf8_decode('Ruido'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 52);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 52);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 52);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 52);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 52);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 54, 111, 54); //HORIZONTAL
+
+// Vibración
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 57);
+$pdf->Cell(0, 0, utf8_decode('Vibración'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 57);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 57);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 57);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 57);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 57);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Fatiga, Cefalea, Disminucion de la capacidad auditiva
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 40);
+$pdf->MultiCell(75, 3, utf8_decode('Fatiga, Cefalea, Disminucion de la capacidad auditiva, Quemaduras superficiales de la piel, quemaduras internas, trauma de variada severidad, Daños a la propiedad y perdida material, muerte.'), 0, "C");
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Dotación ignífugo, Guantes dielectrico
+$pdf->SetXY(191, 40);
+$pdf->MultiCell(100, 3, utf8_decode('Dotacion de trabajo, Escafandras, pausas activas, Capacitación del personal. Hidratación, Uso de protección personal (casco de seguridad, ropa de trabajo, protección auditiva,bloqueador, guantes, gafas).
+Iluminación adecuada para actividades nocturnas o con poca iluminación.'), 0, "C");
+$pdf->Line(5, 60, 292, 60); //HORIZONTAL
+
+// Químicos
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 67);
+$pdf->Cell(0, 0, utf8_decode('Químicos'));
+
+// Quemaduras
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 62);
+$pdf->Cell(0, 0, utf8_decode('Quemaduras'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 62);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 62);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 62);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 62);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 62);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 64, 111, 64); //HORIZONTAL
+
+// Intoxicación / Alergias
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 67);
+$pdf->Cell(0, 0, utf8_decode('Intoxicación / Alergias.'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 67);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 67);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 67);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 67);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 67);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 70, 111, 70); //HORIZONTAL
+
+// Gases/Humos/ Polvo/Vapores
+$pdf->SetFont("Arial", "", 6.7);
+$pdf->SetXY(31, 73);
+$pdf->Cell(0, 0, utf8_decode('Gases/Humos/ Polvo/Vapores'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 73);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 73);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 73);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 73);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 73);
+$pdf->Cell(0, 0, 'x');
+
+
+
+// DATOS DE CONSECUENCIAS
+// Irritacion de la pie
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 65);
+$pdf->MultiCell(75, 3, utf8_decode('Irritacion de la piel, de los ojos, Desmayos, diarreas '), 0, "C");
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Uso de protección personal
+$pdf->SetXY(191, 62);
+$pdf->MultiCell(100, 3, utf8_decode('Uso de protección personal (casco de seguridad, ropa de trabajo, guantes).Protección visual, Tapabocas
+Fichas de seguridad del producto quimico, Rotulacion de los productos quimicos, Botiquin de primerosauxilios'), 0, "C");
+$pdf->Line(5, 76, 292, 76); //HORIZONTAL
+
+// Biomecánico
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 83);
+$pdf->Cell(0, 0, utf8_decode('Biomecánico'));
+
+// Sobre esfuerzo
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 78);
+$pdf->Cell(0, 0, utf8_decode('Sobre esfuerzo'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 78);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 78);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 78);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 78);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 78);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 80, 111, 80); //HORIZONTAL
+
+// Posturas Inadecuadas
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 81);
+$pdf->MultiCell(38, 2.5, utf8_decode('Posturas Inadecuadas'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 82);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 82);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 82);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 82);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 82);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 84, 111, 84); //HORIZONTAL
+
+// Movimientos Forzosos
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 85);
+$pdf->MultiCell(38, 2.5, utf8_decode('Movimientos Forzosos'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 86);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 86);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 86);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 86);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 86);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 88, 111, 88); //HORIZONTAL
+
+// Movimientos Repetitivos
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 89);
+$pdf->MultiCell(38, 2.5, utf8_decode('Movimientos Repetitivos'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 90);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 90);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 90);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 90);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 90);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 92, 111, 92); //HORIZONTAL
+
+// Manipulación de Cargas
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 93);
+$pdf->MultiCell(38, 2.5, utf8_decode('Manipulación de Cargas'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 94);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 94);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 94);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 94);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 94);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Lesiones, Fracturas,Traumas psicologicos, perdida de organos
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 83);
+$pdf->MultiCell(75, 3, utf8_decode('Lesiones osteomusculares, desgarres, esguinces, enfermedad osteomusculares '), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Capacitación, los sistemas de ingeniería para prevención de caídas
+$pdf->SetXY(191, 78);
+$pdf->MultiCell(100, 3, utf8_decode('Trabajo en equipo.Pausas activas. Procedimientos seguros para el levantamiento de cargas. Calistenia antes de iniciar labores.
+Posturas adecuadas, Capacitación en riesgo biomecánico, manejo de cargas, posturas y rotación de personal.
+Ayudas mecanicas para la labor'), 0, "C");
+$pdf->Line(5, 96, 292, 96); //HORIZONTAL
+
+// Mecánico
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 103);
+$pdf->Cell(0, 0, utf8_decode('Mecánico'));
+
+// Golpes
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 98);
+$pdf->Cell(0, 0, utf8_decode('Golpes'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 98);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 98);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 98);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 98);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 98);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 100, 111, 100); //HORIZONTAL
+
+// Atrapamientos
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 102);
+$pdf->Cell(0, 0, utf8_decode('Atrapamientos'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 102);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 102);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 102);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 102);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 102);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 104, 111, 104); //HORIZONTAL
+
+// Proyección de Partículas
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 106);
+$pdf->Cell(0, 0, utf8_decode('Proyección de Partículas'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 106);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 106);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 106);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 106);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 106);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 108, 111, 108); //HORIZONTAL
+
+// Aplastamiento
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 110);
+$pdf->Cell(0, 0, utf8_decode('Aplastamiento'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 110);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 110);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 110);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 110);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 110);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 112, 111, 112); //HORIZONTAL
+
+// Cortes y Heridas
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 114);
+$pdf->Cell(0, 0, utf8_decode('Cortes y Heridas'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 114);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 114);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 114);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 114);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 114);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 116, 111, 116); //HORIZONTAL
+
+// Fallas de equipos y herramientas
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 118);
+$pdf->Cell(0, 0, utf8_decode('Fallas de equipos y herramientas'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 118);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 118);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 118);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 118);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 118);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 120, 111, 120); //HORIZONTAL
+
+// Caída de Objetos
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 122);
+$pdf->Cell(0, 0, utf8_decode('Caída de Objetos'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 122);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 122);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 122);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 122);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 122);
+$pdf->Cell(0, 0, 'x');
+
+
+// DATOS DE CONSECUENCIAS
+// zonas de difícil acceso y zonas denominadas rojas
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 107);
+$pdf->MultiCell(75, 3, utf8_decode('Lesiones, heridas superficiales, amputaciones, fracturas, Muerte. '), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Capacitación al riesgo público.
+$pdf->SetXY(191, 99);
+$pdf->MultiCell(100, 3, utf8_decode('Uso de EPP (Gafas Guantes de seguridady otros)Casco de seguridad, botas de seguridad.
+Dotacion de trabajo. para proceso poda (pantalon anticorte, guantes anticorte) Cuerda de servicio de 20 mts, procedimiento de trabajo seguro Capacitación en manejo de objetos, equipos, maquinas y herramientas para desempeñar labores inspección de equipos y herramientas. Bolso portaherramientas.'), 0, "C");
+$pdf->Line(5, 124, 292, 124); //HORIZONTAL
+
+// zaje de carga
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 130);
+$pdf->Cell(0, 0, utf8_decode('zaje de carga'));
+
+// Desplome de la carga / Caída de objetos
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 125);
+$pdf->MultiCell(38, 2.5, utf8_decode('Desplome de la carga / Caída de objetos'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 127);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 127);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 127);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 127);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 127);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 131, 111, 131); //HORIZONTAL
+
+// Daños a grúas, equipos y demás infraestructura
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 132);
+$pdf->MultiCell(38, 2.5, utf8_decode('Daños a grúas, equipos y demás infraestructura'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 134);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 134);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 134);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 134);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 134);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Lesiones, golpes, heridas superficiales
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 128);
+$pdf->MultiCell(75, 3, utf8_decode('Lesiones, golpes, heridas superficiales, amputaciones, fracturas, Muerte '), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Preoperacionales, Plan y permiso de Izaje de carga
+$pdf->SetXY(191, 125);
+$pdf->MultiCell(100, 3, utf8_decode('Preoperacionales, Plan y permiso de Izaje de carga (critico, no critico), Competencias del aparejador, operador de grua, Capacitacion del personal; Epp ( casco, botas guantes, gafas de segruidad), Epp colectivos para izaje, Pruebas de Izaje certtificada por la ONAC.
+Mantenimiento preventivo y correctivo de vehiculos pesados de izaje'), 0, "C");
+$pdf->Line(5, 140, 292, 140); //HORIZONTAL
+
+// Tecnológico
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 144);
+$pdf->Cell(0, 0, utf8_decode('Tecnológico'));
+
+// Incendio o Explosión
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 141);
+$pdf->MultiCell(38, 2.5, utf8_decode('Incendio o Explosión'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 142);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 142);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 142);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 142);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 142);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 144, 111, 144); //HORIZONTAL
+
+// fuga, derrame, 
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 145);
+$pdf->MultiCell(38, 2.5, utf8_decode('fuga, derrame,'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 146);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 146);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 146);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 146);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 146);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Lesiones, golpes, heridas superficiales
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 141);
+$pdf->MultiCell(75, 3, utf8_decode('Efectos sobre la salud del trabajador, Trauma de variada severidad, Daños a la propiedad y perdida material'), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Preoperacionales, Plan y permiso de Izaje de carga
+$pdf->SetXY(191, 141);
+$pdf->MultiCell(100, 3, utf8_decode('Kit antiderrame, plan de emergencias, Capacitación al personal en atención de emergencias'), 0, "C");
+$pdf->Line(5, 148, 292, 148); //HORIZONTAL
+
+// Locativos
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 153);
+$pdf->Cell(0, 0, utf8_decode('Locativos'));
+
+// Superficies no Uniformes
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 149);
+$pdf->MultiCell(38, 2.5, utf8_decode('Superficies no Uniformes'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 150);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 150);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 150);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 150);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 150);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 152, 111, 152); //HORIZONTAL
+
+// Tropiezo  
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 153);
+$pdf->MultiCell(38, 2.5, utf8_decode('Tropiezo '));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 154);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 154);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 154);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 154);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 154);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 156, 111, 156); //HORIZONTAL
+
+// Caídas del mismo nive
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 157);
+$pdf->MultiCell(38, 2.5, utf8_decode('Caídas del mismo nive '));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 158);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 158);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 158);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 158);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 158);
+$pdf->Cell(0, 0, 'x');
+
+
+// DATOS DE CONSECUENCIAS
+// Lesiones, golpes, heridas superficiales
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(112, 152);
+$pdf->MultiCell(75, 3, utf8_decode('Lesiones, golpes, heridas superficiales, fracturas'), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Preoperacionales, Plan y permiso de Izaje de carga
+$pdf->SetXY(191, 151);
+$pdf->MultiCell(100, 3, utf8_decode('Jornadas de Orden y aseo, capacitaciones e inspecciones periódicas y acompañamientos a labores de campo'), 0, "C");
+$pdf->Line(5, 160, 292, 160); //HORIZONTAL
+
+// Biológico
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(11, 167);
+$pdf->Cell(0, 0, utf8_decode('Biológico'));
+
+// Picaduras y mordeduras
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 162);
+$pdf->MultiCell(38, 2.5, utf8_decode('Picaduras y mordeduras'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 163);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 163);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 163);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 163);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 163);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 165, 111, 165); //HORIZONTAL
+
+// Virus / Bacterias / Hongos  
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 168);
+$pdf->MultiCell(38, 2.5, utf8_decode('Virus / Bacterias / Hongos'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 168);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 168);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 168);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 168);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 168);
+$pdf->Cell(0, 0, 'x');
+
+
+// DATOS DE CONSECUENCIAS
+// Afectaciones por enfermedad temporal que produce malestar
+$pdf->SetFont("Arial", "", 6.7);
+$pdf->SetXY(112, 161);
+$pdf->MultiCell(75, 3, utf8_decode('Afectaciones por enfermedad temporal que produce malestar, contagio de enfermedades zoonoticas. Afectaciones por picaduras, mordeduras de insectos, anfibios, caninos y/u otros'), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Capacitaciones sobre riesgo biológico
+$pdf->SetXY(191, 161);
+$pdf->MultiCell(100, 3, utf8_decode('Capacitaciones sobre riesgo biológico, repelente, inspecciones de seguridad, orden y aseo, primeros auxilios.Protocolos de bioseguridad adaptados a la normatividad vigente, vacunas vigentes, traje de apicultura, Botiquin de primeros auxilios, Dotación, EPP, guantes gafas, Botas'), 0, "C");
+$pdf->Line(5, 173, 292, 173); //HORIZONTAL
+
+// Fenomenos Naturales
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(4.5, 180);
+$pdf->Cell(0, 0, utf8_decode('Fenomenos Naturales'));
+
+// Sismo
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 173);
+$pdf->MultiCell(38, 2.5, utf8_decode('Sismo'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 174);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 174);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 174);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 174);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 174);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 176, 111, 176); //HORIZONTAL
+
+// Terremoto / Derrumbe
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 176.5);
+$pdf->MultiCell(38, 2.5, utf8_decode('Terremoto / Derrumbe'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 177);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 177);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 177);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 177);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 177);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 179, 111, 179); //HORIZONTAL
+
+// Inundaciones
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 180);
+$pdf->MultiCell(38, 2.5, utf8_decode('Inundaciones'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 181);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 181);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 181);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 181);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 181);
+$pdf->Cell(0, 0, 'x');
+$pdf->Line(31, 183, 111, 183); //HORIZONTAL
+
+// Precipitaciones, (lluvias, vendavales)
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 184);
+$pdf->MultiCell(38, 2.5, utf8_decode('Precipitaciones, (lluvias, vendavales)'));
+
+// X 1
+$pdf->SetFont("Arial", "", 9);
+$pdf->SetXY(72, 185);
+$pdf->Cell(0, 0, 'x');
+
+// X 2
+$pdf->SetXY(80, 185);
+$pdf->Cell(0, 0, 'x');
+
+// X 3
+$pdf->SetXY(88, 185);
+$pdf->Cell(0, 0, 'x');
+
+// X 4
+$pdf->SetXY(97, 185);
+$pdf->Cell(0, 0, 'x');
+
+// X 5
+$pdf->SetXY(105, 185);
+$pdf->Cell(0, 0, 'x');
+
+// DATOS DE CONSECUENCIAS
+// Afectaciones por enfermedad temporal que produce malestar
+$pdf->SetFont("Arial", "", 6.7);
+$pdf->SetXY(112, 174);
+$pdf->MultiCell(75, 3, utf8_decode('Efectos sobre la salud del trabajador, Trauma de variada severidad, Daños a la propiedad y perdida material'), 0, "C");
+
+
+// CONTROLES EN EL ENTORNO Y SIMULTANEAS Y POSTERIORES
+// Capacitaciones sobre riesgo biológico
+$pdf->SetXY(191, 173);
+$pdf->MultiCell(100, 3, utf8_decode('Impermeable, Botiquín de primeros Auxilios, Camilla, ExtintorSocializaciones de Planes de Emergencia, como actuar antes, durante y después de un emergencia, Capacitaciones de manejo de extintores y Primeros Auxilios , Inspecciones de seguridad y Botiquín, brigada de emergencia.
+Dependiendo de la labor no se debe trabajar en lluvias.'), 0, "C");
+
+
 
 // Salida del archivo PDF
 $pdf->Output();
