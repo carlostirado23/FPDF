@@ -3196,6 +3196,837 @@ $pdf->MultiCell(100, 3, utf8_decode('Impermeable, Botiquín de primeros Auxilios
 Dependiendo de la labor no se debe trabajar en lluvias.'), 0, "C");
 
 
+// PAGINA NUMERO 4
+$pdf->AddPage('LANDSCAPE', '');
+
+// Dibujar el marco del formulario con bordes redondeados
+$pdf->RoundedRect(5, 10, 287, 152, 0, 'D');
+
+$pdf->Image('./servicer.jpeg', 6, 11, 40);
+
+// ANALISIS SEGURO DE TRABAJO
+$pdf->SetFont('Arial', 'B', 9);
+$pdf->SetX($pdf->GetX() - 190);
+$pdf->Cell(0, 8, utf8_decode("ANÁLISIS SEGURO DE TRABAJO"));
+$pdf->Line(47, 16, 292, 16); //HORIZONTAL
+
+// PROCESO SEGURIDAD Y SALUD EN EL TRABAJO
+$pdf->SetX($pdf->GetX() - 180);
+$pdf->Cell(0, 24, utf8_decode("PROCESO SEGURIDAD Y SALUD EN EL TRABAJO"));
+
+// TEXTO CON FONDE DE COLOR
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->PaintTextBackground(5, 27, utf8_decode('ELABORÓ / ACTUALIZÓ'), [35, 175, 216], 0, 42, 4);
+$pdf->PaintTextBackground(47, 27, utf8_decode('REVISÓ'), [35, 175, 216], 0, 219, 4);
+
+// APROBO
+$pdf->PaintTextBackground(266, 27, utf8_decode('APROBÓ'), [35, 175, 216], 0, 26, 4);
+
+// LINEAL VERTICAL QUE ESTA AL LADO DE LA IMAGEN
+$pdf->Line(47, 10, 47, 34); // VERTICAL
+
+// codigo
+$pdf->Line(266, 10, 266, 34); //VERTICAL
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(267, 13);
+$pdf->Cell(0, 0, utf8_decode("Código:"));
+
+// F-SST-02
+$pdf->SetFont("Arial", "", 8);
+$pdf->SetXY(277, 13);
+$pdf->Cell(0, 0, utf8_decode("F-SST-02"));
+
+// FECHA
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetX($pdf->GetX() - 20);
+$pdf->Cell(0, 10, "Fecha:");
+
+// 01/04/2024
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 11);
+$pdf->Cell(0, 10, "01/04/2024");
+$pdf->Line(266, 19.6, 292, 19.6); //HORIZONTAL
+
+// VERSION
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetX($pdf->GetX() - 20);
+$pdf->Cell(0, 18, utf8_decode("Versión:"));
+
+// 02
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 9);
+$pdf->Cell(0, 18, "02");
+$pdf->Line(266, 23.3, 292, 23.3); //HORIZAONTAL
+
+// VERSION
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetX($pdf->GetX() - 20);
+$pdf->Cell(0, 25, utf8_decode("Página:"));
+
+// 1 de 4
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 10);
+$pdf->Cell(0, 25, "3 de 4");
+$pdf->Line(5, 27, 292, 27); //HORIZAONTAL
+$pdf->Line(5, 31, 292, 31); //HORIZAONTAL
+
+// GERENTE
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 14);
+$pdf->Cell(0, 39.4, "Gerente");
+
+
+// auxiliar de calidad
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetX($pdf->GetX() - 571);
+$pdf->Cell(0, 39.4, "Auxiliar de calidad");
+
+// LIDER SGI
+$pdf->SetX($pdf->GetX() - 143);
+$pdf->Cell(0, 39.4, "Lider SGI");
+$pdf->Line(5, 34, 292, 34); //HORIZAONTAL
+
+
+// Identificación de aspectos e impactos ambientales
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(4, 60);
+$pdf->MultiCell(28, 3, utf8_decode('Identificación de aspectos e impactos ambientales'), 0, "C");
+$pdf->Line(31, 34, 31, 100); //VERTICAL
+
+// Aspectos 
+$pdf->PaintTextBackground(31, 34, utf8_decode('Aspectos'), [35, 175, 216], 0, 35, 7);
+$pdf->Line(66, 34, 66, 41); //VERTICAL
+
+// Impactos
+$pdf->PaintTextBackground(66, 34, utf8_decode('Impactos'), [35, 175, 216], 0, 27, 7);
+$pdf->Line(31, 41, 292, 41);//HORIZONTAL
+$pdf->Line(93, 34, 93, 100); //VERTICAL
+
+// 1
+$pdf->PaintTextBackground(93, 34, utf8_decode('1'), [35, 175, 216], 0, 4, 6.8);
+$pdf->Line(97, 34, 97, 100); //VERTICAL
+
+// 2
+$pdf->PaintTextBackground(97, 34, utf8_decode('2'), [35, 175, 216], 0, 4, 6.8);
+$pdf->Line(101, 34, 101, 100); //VERTICAL
+
+// 3
+$pdf->PaintTextBackground(101, 34, utf8_decode('3'), [35, 175, 216], 0, 4, 6.8);
+$pdf->Line(105, 34, 105, 100); //VERTICAL
+
+// 4
+$pdf->PaintTextBackground(105, 34, utf8_decode('4'), [35, 175, 216], 0, 4, 6.8);
+$pdf->Line(109, 34, 109, 100); //VERTICAL
+
+// 5
+$pdf->PaintTextBackground(109, 34, utf8_decode('5'), [35, 175, 216], 0, 4, 6.8);
+$pdf->Line(113, 34, 113, 100); //VERTICAL
+
+// Aptitud y competencia del personal y Analisis antes de realizar la labor
+$pdf->PaintTextBackground(113, 34, utf8_decode('Aptitud y competencia del personal y Analisis antes de realizar la labor'), [35, 175, 216], 0, 140, 6.8);
+$pdf->Line(253, 34, 253, 100); //VERTICAL
+
+// # Trab 1
+$pdf->PaintTextBackground(253, 34, utf8_decode('# Trab 1'), [35, 175, 216], 0, 13, 5);
+$pdf->PaintTextBackground(253, 38.8, utf8_decode('SI    NO'), [35, 175, 216], 0, 13, 2);
+$pdf->Line(266, 34, 266, 100); //VERTICAL
+
+// # Trab 2
+$pdf->PaintTextBackground(266, 34, utf8_decode('# Trab 2'), [35, 175, 216], 0, 13, 5);
+$pdf->PaintTextBackground(266, 38.8, utf8_decode('SI    NO'), [35, 175, 216], 0, 13, 2);
+$pdf->Line(279, 34, 279, 100); //VERTICAL
+
+// # Trab 3
+$pdf->PaintTextBackground(279, 34, utf8_decode('# Trab 3'), [35, 175, 216], 0, 13, 5);
+$pdf->PaintTextBackground(279, 38.8, utf8_decode('SI    NO'), [35, 175, 216], 0, 13, 2);
+
+
+// ¿se realizo la Identificación de los aspectos e impactos ambientales potenciales para realizar el trabajo?
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(29.5, 41);
+$pdf->MultiCell(65, 3, utf8_decode('¿se realizo la Identificación de los aspectos e impactos ambientales potenciales para realizar el trabajo?'), 0, "C");
+$pdf->Line(31, 47, 292, 47); //HORIZONTAL
+$pdf->Line(66, 47, 66, 100); //VERTICAL
+
+// X 1
+$pdf->SetXY(93, 44);
+$pdf->Cell(0, 0, 'X');
+
+// X 2
+$pdf->SetXY(97, 44);
+$pdf->Cell(0, 0, 'X');
+
+// X 3
+$pdf->SetXY(101, 44);
+$pdf->Cell(0, 0, 'X');
+
+// X 4
+$pdf->SetXY(105, 44);
+$pdf->Cell(0, 0, 'X');
+
+// X 5
+$pdf->SetXY(109, 44);
+$pdf->Cell(0, 0, 'X');
+
+// ME ENCUENTRO EN BUENAS CONDICIONES DE SALUD: ¿El personal notifica alguna condición del estado de salud?
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(115, 44);
+$pdf->Cell(0, 0, utf8_decode('ME ENCUENTRO EN BUENAS CONDICIONES DE SALUD:'), 0, "C");
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(183, 44);
+$pdf->Cell(0, 0, utf8_decode('¿El personal notifica alguna condición del estado de salud?'), 0, "C");
+
+// Trab 1 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(254, 44);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(259.5, 41, 259.5, 100); //VERTICAL
+
+// Trab 1 NO
+$pdf->SetXY(260, 44);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 2 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(267, 44);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(272.5, 41, 272.5, 100); //VERTICAL
+
+// Trab 2 NO
+$pdf->SetXY(273, 44);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 3 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(280, 44);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(285.5, 41, 285.5, 100); //VERTICAL
+
+// Trab 3 NO
+$pdf->SetXY(286, 44);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Consumo de agua y energía: 
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(16, 49);
+$pdf->MultiCell(65, 3, utf8_decode('Consumo de agua y energía:'), 0, "C");
+$pdf->Line(31, 53, 292, 53); //HORIZONTAL
+
+// Agotamiento de los recursos naturales
+$pdf->SetXY(65, 47);
+$pdf->MultiCell(30, 3, utf8_decode('Agotamiento de los recursos naturales'), 0, "C");
+
+// X 1
+$pdf->SetXY(93, 50);
+$pdf->Cell(0, 0, 'X');
+
+// X 2
+$pdf->SetXY(97, 50);
+$pdf->Cell(0, 0, 'X');
+
+// X 3
+$pdf->SetXY(101, 50);
+$pdf->Cell(0, 0, 'X');
+
+// X 4
+$pdf->SetXY(105, 50);
+$pdf->Cell(0, 0, 'X');
+
+// X 5
+$pdf->SetXY(109, 50);
+$pdf->Cell(0, 0, 'X');
+
+// ME ENCUENTRO CALIFICADO PARA REALIZAR LA LABOR:
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(113, 48.5);
+$pdf->Cell(0, 0, utf8_decode('ME ENCUENTRO CALIFICADO PARA REALIZAR LA LABOR:'));
+//   ¿he recibido entrenamiento para la labor y cuento con las
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(185, 48.5);
+$pdf->Cell(0, 0, utf8_decode(' ¿he recibido entrenamiento para la labor y cuento con las'));
+// competencia requeridas?
+$pdf->SetXY(165, 51);
+$pdf->Cell(0, 0, utf8_decode('competencia requeridas?'));
+
+// Trab 1 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(254, 50);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(259.5, 41, 259.5, 100); //VERTICAL
+
+// Trab 1 NO
+$pdf->SetXY(260, 50);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 2 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(267, 50);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(272.5, 41, 272.5, 100); //VERTICAL
+
+// Trab 2 NO
+$pdf->SetXY(273, 50);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 3 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(280, 50);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(285.5, 41, 285.5, 100); //VERTICAL
+
+// Trab 3 NO
+$pdf->SetXY(286, 50);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+
+// Generación de residuos sólidos y líquidos:
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(34, 53);
+$pdf->MultiCell(30, 3, utf8_decode('Generación de residuos sólidos y líquidos:'), 0, "C");
+
+// Contaminación del suelo y fuentes de agua
+$pdf->SetXY(65, 53);
+$pdf->MultiCell(29, 3, utf8_decode('Contaminación del suelo y fuentes de agua'), 0, "C");
+
+// X 1
+$pdf->SetXY(93, 56);
+$pdf->Cell(0, 0, 'X');
+
+// X 2
+$pdf->SetXY(97, 56);
+$pdf->Cell(0, 0, 'X');
+
+// X 3
+$pdf->SetXY(101, 56);
+$pdf->Cell(0, 0, 'X');
+
+// X 4
+$pdf->SetXY(105, 56);
+$pdf->Cell(0, 0, 'X');
+
+// X 5
+$pdf->SetXY(109, 56);
+$pdf->Cell(0, 0, 'X');
+
+// IDENTIFICACION DE PELIGROS Y VALORACION DE RIESGOS POTENCIALES:
+$pdf->SetFont("Arial", "B", 6.5);
+$pdf->SetXY(113, 54.8);
+$pdf->Cell(0, 0, utf8_decode('IDENTIFICACION DE PELIGROS Y VALORACION DE RIESGOS POTENCIALES:'), 0, "C");
+// ¿se realizo la Identificación de los circuitos y/o
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(200, 54.5);
+$pdf->Cell(0, 0, utf8_decode('¿se realizo la Identificación de los circuitos y/o'), 0, "C");
+// equipos a trabajar y los peligros y riesgos potenciales para realizar el trabajo?
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(140, 57.5);
+$pdf->Cell(0, 0, utf8_decode('equipos a trabajar y los peligros y riesgos potenciales para realizar el trabajo?'), 0, "C");
+
+// Trab 1 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(254, 56);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(259.5, 41, 259.5, 100); //VERTICAL
+
+// Trab 1 NO
+$pdf->SetXY(260, 56);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 2 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(267, 56);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(272.5, 41, 272.5, 100); //VERTICAL
+
+// Trab 2 NO
+$pdf->SetXY(273, 56);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 3 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(280, 56);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(285.5, 41, 285.5, 100); //VERTICAL
+
+// Trab 3 NO
+$pdf->SetXY(286, 56);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+$pdf->Line(31, 59, 292, 59); //HORIZONTAL
+
+// Intervención arbórea:
+$pdf->SetXY(36, 62);
+$pdf->Cell(0, 0, utf8_decode('Intervención arbórea:'));
+
+// Agotamiento de los recursos naturales
+$pdf->SetXY(67, 59);
+$pdf->MultiCell(25, 3, utf8_decode('Agotamiento de los recursos naturales'));
+
+// X 1
+$pdf->SetXY(93, 62);
+$pdf->Cell(0, 0, 'X');
+
+// X 2
+$pdf->SetXY(97, 62);
+$pdf->Cell(0, 0, 'X');
+
+// X 3
+$pdf->SetXY(101, 62);
+$pdf->Cell(0, 0, 'X');
+
+// X 4
+$pdf->SetXY(105, 62);
+$pdf->Cell(0, 0, 'X');
+
+// X 5
+$pdf->SetXY(109, 62);
+$pdf->Cell(0, 0, 'X');
+
+// EQUIPOS Y HTAS:
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->SetXY(115, 61);
+$pdf->Cell(0, 0, 'EQUIPOS Y HTAS:');
+//  ¿Se realizo la Selección de materiales, equipos y herramientas de trabajo adecuados y cuento con los
+$pdf->SetFont('Arial', '', 7);
+$pdf->SetXY(138, 61);
+$pdf->Cell(0, 0, utf8_decode('¿Se realizo la Selección de materiales, equipos y herramientas de trabajo adecuados y cuento con los'));
+// necesarios para laborar?
+$pdf->SetXY(165, 63.5);
+$pdf->Cell(0, 0, 'necesarios para laborar?');
+
+// Trab 1 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(254, 62);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(259.5, 41, 259.5, 100); //VERTICAL
+
+// Trab 1 NO
+$pdf->SetXY(260, 62);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 2 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(267, 62);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(272.5, 41, 272.5, 100); //VERTICAL
+
+// Trab 2 NO
+$pdf->SetXY(273, 62);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 3 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(280, 62);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(285.5, 41, 285.5, 100); //VERTICAL
+
+// Trab 3 NO
+$pdf->SetXY(286, 62);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+$pdf->Line(31, 65, 292, 65); //HORIZONTAL
+
+// Manejo de productos químicos:
+$pdf->SetXY(31, 70);
+$pdf->Cell(0, 0, utf8_decode('Manejo de productos químicos:'));
+
+// Generación de residuos peligrosos
+$pdf->SetXY(67, 67);
+$pdf->MultiCell(24, 3, utf8_decode('Generación de residuos peligrosos'));
+
+// X 1
+$pdf->SetXY(93, 70);
+$pdf->Cell(0, 0, 'X');
+
+// X 2
+$pdf->SetXY(97, 70);
+$pdf->Cell(0, 0, 'X');
+
+// X 3
+$pdf->SetXY(101, 70);
+$pdf->Cell(0, 0, 'X');
+
+// X 4
+$pdf->SetXY(105, 70);
+$pdf->Cell(0, 0, 'X');
+
+// X 5
+$pdf->SetXY(109, 70);
+$pdf->Cell(0, 0, 'X');
+
+// PLANIFICACION DE TRABAJO:
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->SetXY(113, 66.5);
+$pdf->Cell(0, 0, 'PLANIFICACION DE TRABAJO:');
+//  ¿Se hizo Revisión y verificación del buen estado de los materiales, equipos y herramientas 
+$pdf->SetFont('Arial', '', 7);
+$pdf->SetXY(151, 66.5);
+$pdf->Cell(0, 0, utf8_decode('¿Se hizo Revisión y verificación del buen estado de los materiales, equipos y herramientas'));
+// de trabajo seleccionadas y se realizo la revisión de condiciones de la instalación (estructura, postes, arboles, equipos, etc. y hubo coordinación de operación con el centro de control CLD?
+$pdf->SetXY(113, 68);
+$pdf->MultiCell(140, 3, utf8_decode('de trabajo seleccionadas y se realizo la revisión de condiciones de la instalación (estructura, postes, arboles, equipos, etc. y hubo coordinación de operación con el centro de control CLD?'), 0, 'C');
+
+// Trab 1 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(254, 70);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(259.5, 41, 259.5, 100); //VERTICAL
+
+// Trab 1 NO
+$pdf->SetXY(260, 70);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 2 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(267, 70);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(272.5, 41, 272.5, 100); //VERTICAL
+
+// Trab 2 NO
+$pdf->SetXY(273, 70);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 3 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(280, 70);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(285.5, 41, 285.5, 100); //VERTICAL
+
+// Trab 3 NO
+$pdf->SetXY(286, 70);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+$pdf->Line(31, 74, 292, 74); //HORIZONTAL
+
+// Remoción del suelo
+$pdf->SetXY(35, 77);
+$pdf->Cell(0, 0, utf8_decode('Remoción del suelo'));
+
+// Deterioro a daño a la capa del suelo
+$pdf->SetXY(67, 74);
+$pdf->MultiCell(25, 3, utf8_decode('Deterioro a daño a la capa del suelo'));
+
+// X 1
+$pdf->SetXY(93, 77);
+$pdf->Cell(0, 0, 'X');
+
+// X 2
+$pdf->SetXY(97, 77);
+$pdf->Cell(0, 0, 'X');
+
+// X 3
+$pdf->SetXY(101, 77);
+$pdf->Cell(0, 0, 'X');
+
+// X 4
+$pdf->SetXY(105, 77);
+$pdf->Cell(0, 0, 'X');
+
+// X 5
+$pdf->SetXY(109, 77);
+$pdf->Cell(0, 0, 'X');
+
+// PERMISOS DE TRABAJO Y OTROS DOCUMENTOS:
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->SetXY(113, 75.7);
+$pdf->Cell(0, 0, utf8_decode('PERMISOS DE TRABAJO Y OTROS DOCUMENTOS:'));
+// ¿Cuento con todos los permisos de trabajo seguro, preoperaicionales
+$pdf->SetFont('Arial', '', 7);
+$pdf->SetXY(175, 75.7);
+$pdf->Cell(0, 0, utf8_decode('¿Cuento con todos los permisos de trabajo seguro, preoperaicionales'));
+// firmados y autorizados para la ejecucion de la labor?
+$pdf->SetXY(155, 78.5);
+$pdf->Cell(0, 0, utf8_decode('firmados y autorizados para la ejecucion de la labor?'));
+
+// Trab 1 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(254, 77);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(259.5, 41, 259.5, 100); //VERTICAL
+
+// Trab 1 NO
+$pdf->SetXY(260, 77);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 2 SI
+$pdf->SetXY(267, 77);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(272.5, 41, 272.5, 100); //VERTICAL
+
+// Trab 2 NO
+$pdf->SetXY(273, 77);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 3 SI
+$pdf->SetXY(280, 77);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(285.5, 41, 285.5, 100); //VERTICAL
+
+// Trab 3 NO
+$pdf->SetXY(286, 77);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+$pdf->Line(31, 80, 292, 80); //HORIZONTAL
+
+// OTRO:
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(31, 82);
+$pdf->Cell(0, 0, utf8_decode('OTRO:'));
+// respuesta de otro
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(31, 84);
+$pdf->MultiCell(35, 3, utf8_decode('datos de aspecto'));
+
+
+// respuesta de impactos, OTRO
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(66, 81);
+$pdf->MultiCell(26, 3, utf8_decode('datos de impacto'));
+
+// X 1
+$pdf->SetXY(93, 90);
+$pdf->Cell(0, 0, 'X');
+
+// X 2
+$pdf->SetXY(97, 90);
+$pdf->Cell(0, 0, 'X');
+
+// X 3
+$pdf->SetXY(101, 90);
+$pdf->Cell(0, 0, 'X');
+
+// X 4
+$pdf->SetXY(105, 90);
+$pdf->Cell(0, 0, 'X');
+
+// X 5
+$pdf->SetXY(109, 90);
+$pdf->Cell(0, 0, 'X');
+
+// APLICA PARA PROCESO DE PODA:
+$pdf->SetFont("Arial", "B", 7);
+$pdf->SetXY(113, 83);
+$pdf->Cell(0, 0, utf8_decode('APLICA PARA PROCESO DE PODA:'));
+// ¿Se diligencia el permiso a predios privados en los casos que se requiera para le ejecución
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(157, 83);
+$pdf->Cell(0, 0, utf8_decode('¿Se diligencia el permiso a predios privados en los casos que se requiera para le'));
+// ejecución de la actividad, se revisan las condiciones fitosanitarias
+$pdf->SetXY(113, 84);
+$pdf->MultiCell(140, 3, utf8_decode('ejecución de la actividad, se revisan las condiciones fitosanitarias, identificando la especie y estructura física del árbol; Se realiza corte por debajo de la rama a 30 o 60 cm hacia afuera del tronco y luego realizar corte por encima con el fin de evitar cortes mal hechos y al final se realiza el corte definitivo para que el labio cicatrizador pueda hacer su proceso natural de sellar el corte; Se repica y se dispone adecuada del material vegetal resultante?'), 0, 'C');
+
+// Trab 1 SI
+$pdf->SetFont("Arial", "", 7);
+$pdf->SetXY(254, 90);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(259.5, 41, 259.5, 100); //VERTICAL
+
+// Trab 1 NO
+$pdf->SetXY(260, 90);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 2 SI
+$pdf->SetXY(267, 90);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(272.5, 41, 272.5, 100); //VERTICAL
+
+// Trab 2 NO
+$pdf->SetXY(273, 90);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+
+// Trab 3 SI
+$pdf->SetXY(280, 90);
+$pdf->Cell(0, 0, utf8_decode('SI'));
+$pdf->Line(285.5, 41, 285.5, 100); //VERTICAL
+
+// Trab 3 NO
+$pdf->SetXY(286, 90);
+$pdf->Cell(0, 0, utf8_decode('NO'));
+$pdf->Line(5, 100, 292, 100); //HORIZONTAL
+
+// Confirmo que el lugar de trabajo y la información diligenciada han sido revisados y examinados, adicionalmente las precauciones señaladas han sido cumplidas; soy responsable de darle cumplimiento a las controles establecidos anteriormente
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->SetXY(70, 101);
+$pdf->MultiCell(180, 3, utf8_decode('Confirmo que el lugar de trabajo y la información diligenciada han sido revisados y examinados, adicionalmente las precauciones señaladas han sido cumplidas; soy responsable de darle cumplimiento a las controles establecidos anteriormente'), 0, 'C');
+$pdf->Line(5, 107, 292, 107); //HORIZONTAL
+
+// PARTICIPANTES
+$pdf->PaintTextBackground(5, 107, utf8_decode('PARTICIPANTES'), [35, 175, 216], 0, 287, 4);
+$pdf->Line(5, 111, 292, 111); //HORIZONTAL
+
+// #
+$pdf->PaintTextBackground(5, 111, utf8_decode('#'), [35, 175, 216], 0, 4, 6);
+$pdf->Line(9, 111, 9, 144); //VERTICAL
+$pdf->Line(5, 117, 292, 117); //HORIZONTAL
+
+// Nombre
+$pdf->PaintTextBackground(9, 111, utf8_decode('Nombre'), [35, 175, 216], 0, 50, 5.8);
+$pdf->Line(59, 111, 59, 162); //VERTICAL
+
+// Cargo
+$pdf->PaintTextBackground(59, 111, utf8_decode('Cargo'), [35, 175, 216], 0, 40, 5.8);
+$pdf->Line(99, 111, 99, 162); //VERTICAL
+
+// Firma
+$pdf->PaintTextBackground(99, 111, utf8_decode('Firma'), [35, 175, 216], 0, 35, 5.8);
+$pdf->Line(134, 111, 134, 144); //VERTICAL
+
+// OBSERVACIONES y/o NOVEDADES ( si aplica)
+$pdf->PaintTextBackground(134, 111, utf8_decode('OBSERVACIONES y/o NOVEDADES ( si aplica)'), [35, 175, 216], 0, 158, 5.8);
+
+// 1
+$pdf->SetFont('Arial', 'B', 9);
+$pdf->SetXY(5, 122);
+$pdf->Cell(0, 0, '1');
+
+// NOMBRE
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(14, 118);
+$pdf->MultiCell(33, 4, utf8_encode('juan david martinez ordosgoitia'));
+
+// CARGO
+$pdf->SetXY( 60, 118);
+$pdf->MultiCell(33, 4, utf8_encode('BRIGADA'));
+
+// FIRMA
+$pdf->SetXY(104, 120);
+$pdf->MultiCell(33, 4, utf8_encode('Juan Martinez'));
+$pdf->Line(5, 126, 134, 126); //HORIZONTAL
+
+// 2
+$pdf->SetFont('Arial', 'B', 9);
+$pdf->SetXY(5, 131);
+$pdf->Cell(0, 0, '2');
+
+// NOMBRE
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(14, 127);
+$pdf->MultiCell(33, 4, utf8_encode('juan david martinez ordosgoitia'));
+
+// CARGO
+$pdf->SetXY(60, 128);
+$pdf->MultiCell(33, 4, utf8_encode('BRIGADA'));
+
+// FIRMA
+$pdf->SetXY(104, 129);
+$pdf->MultiCell(33, 4, utf8_encode('Juan Martinez'));
+$pdf->Line(5, 135, 134, 135); //HORIZONTAL
+
+// 3
+$pdf->SetFont('Arial', 'B', 9);
+$pdf->SetXY(5, 140);
+$pdf->Cell(0, 0, '3');
+
+// NOMBRE
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(14, 136);
+$pdf->MultiCell(33, 4, utf8_encode('juan david martinez ordosgoitia'));
+
+// CARGO
+$pdf->SetXY(60, 136);
+$pdf->MultiCell(33, 4, utf8_encode('BRIGADA'));
+
+// FIRMA
+$pdf->SetXY(104, 138);
+$pdf->MultiCell(33, 4, utf8_encode('Juan Martinez'));
+$pdf->Line(5, 144, 292, 144); //HORIZONTAL
+
+
+// FIRMA DEL TECNICO O TRABAJADOR ENCARGADO No DE IDENTEFICACION 
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->PaintTextBackground(5, 144, utf8_decode('FIRMA DEL TECNICO O TRABAJADOR'), [35, 175, 216], 0, 53.8, 13);
+// ENCARGADO
+$pdf->PaintTextBackground(5, 152, utf8_decode('ENCARGADO'), [35, 175, 216], 0, 53.8, 5.8);
+// No DE IDENTEFICACION 
+$pdf->PaintTextBackground(5, 156, utf8_decode('No DE IDENTEFICACION'), [35, 175, 216], 0, 53.8, 5.8);
+
+
+// Firma:
+$pdf->SetFont('Arial', '', 8);
+$pdf->SetXY(59, 149);
+$pdf->MultiCell(33, 4, utf8_encode('Firma:'));
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(70, 149);
+$pdf->MultiCell(33, 4, utf8_encode('Juan Martinez'));
+$pdf->Line(59, 153, 99, 153); //HORIZONTAL
+
+// CC
+$pdf->SetFont('Arial', '', 8);
+$pdf->SetXY(59, 158);
+$pdf->MultiCell(33, 4, utf8_encode('CC:'));
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(70, 158);
+$pdf->MultiCell(33, 4, utf8_encode('123456732'));
+
+// FIRMA DEL SUPERVISOR / CAPATAZ  
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->PaintTextBackground(99, 144, utf8_decode('FIRMA DEL SUPERVISOR / CAPATAZ'), [35, 175, 216], 0, 53.8, 13);
+// (OPCIONAL)
+$pdf->PaintTextBackground(99, 152, utf8_decode('(OPCIONAL)'), [35, 175, 216], 0, 53.8, 5.8);
+// No DE IDENTIFICACION
+$pdf->PaintTextBackground(99, 156, utf8_decode('No DE IDENTIFICACION'), [35, 175, 216], 0, 53.8, 5.8);
+$pdf->Line(153, 144, 153, 162); //VERTICAL
+// Firma:
+$pdf->SetFont('Arial', '', 8);
+$pdf->SetXY(153, 149);
+$pdf->MultiCell(33, 4, utf8_encode('Firma:'));
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(162, 149);
+$pdf->MultiCell(33, 4, utf8_encode('Juan Martinez'));
+$pdf->Line(153, 153, 195, 153); //HORIZONTAL
+
+// CC
+$pdf->SetFont('Arial', '', 8);
+$pdf->SetXY(153, 158);
+$pdf->MultiCell(33, 4, utf8_encode('CC:'));
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(162, 158);
+$pdf->MultiCell(33, 4, utf8_encode('123456732'));
+$pdf->Line(195, 144, 195, 162); //VERTICAL
+
+// FIRMA DEL SST (OPCIONAL)
+$pdf->SetFont('Arial', 'B', 7);
+$pdf->PaintTextBackground(195, 144, utf8_decode('FIRMA DEL SST (OPCIONAL)'), [35, 175, 216], 0, 53.8, 14);
+// No DE IDENTEFICACION 
+$pdf->PaintTextBackground(195, 152, utf8_decode('No DE IDENTEFICACION '), [35, 175, 216], 0, 53.8, 10);
+$pdf->Line(249, 117, 249, 162); //VERTICAL
+
+// Firma:
+$pdf->SetFont('Arial', '', 8);
+$pdf->SetXY(249, 149);
+$pdf->MultiCell(33, 4, utf8_encode('Firma:'));
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(259, 149);
+$pdf->MultiCell(33, 4, utf8_encode('Juan Martinez'));
+$pdf->Line(249, 153, 292, 153); //HORIZONTAL
+
+// CC
+$pdf->SetFont('Arial', '', 8);
+$pdf->SetXY(249, 158);
+$pdf->MultiCell(33, 4, utf8_encode('CC:'));
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(259, 158);
+$pdf->MultiCell(33, 4, utf8_encode('123456732'));
+
+// Firma del Resp. Brigada
+$pdf->SetFont('Arial', '', 7);
+$pdf->Line(234, 117, 234, 144); //VERTICAL
+$pdf->SetXY(234, 124);
+$pdf->MultiCell(15, 4, utf8_encode('Firma del Resp. Brigada'), 0, 'C');
+
+// Firma responsabe brigaada
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(259, 125);
+$pdf->MultiCell(33, 4, utf8_encode('Juan Martinez'));
+$pdf->Line(249, 135, 292, 135); //HORIZONTAL
+// CC
+$pdf->SetFont('Arial', '', 8);
+$pdf->SetXY(249, 140);
+$pdf->MultiCell(33, 4, utf8_encode('CC:'));
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetXY(259, 140);
+$pdf->MultiCell(33, 4, utf8_encode('123456732'));
+
+// DATOS DE OBSERVACIONES y/o NOVEDADES ( si aplica)
+$pdf->SetFont('Arial', '', 7);
+$pdf->SetXY(137, 120);
+$pdf->MultiCell(90, 4, utf8_encode('OBSERVACIONES'), 0, 'C');
+
 
 // Salida del archivo PDF
 $pdf->Output();
