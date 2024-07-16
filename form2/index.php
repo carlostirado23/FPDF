@@ -1,4 +1,6 @@
 <?php
+// F-SST-02 _ Ver 02_Análisis Seguro de Trabajo - ATS
+
 require('fpdf/fpdf.php');
 
 class PDF extends FPDF
