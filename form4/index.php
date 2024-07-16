@@ -100,7 +100,7 @@ class PDF extends FPDF
 
 $pdf = new PDF();
 $pdf->AliasNbPages();
-$pdf->AddPage('', 'LEGAL');
+$pdf->AddPage('', 'LETTER');
 
 // Dibujar el marco del formulario con bordes redondeados
 $pdf->RoundedRect(5, 10, 206, 158, 0, 'D');
